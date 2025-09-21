@@ -370,62 +370,7 @@ function TjenesterPage() {
                 <div className="h-full bg-black/20 flex items-center justify-center">
                   <div className="bg-red-800 p-4 rounded-full">
                     <Hammer className="w-12 h-12 text-white" />
-                  </div>      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Hvorfor <span className="text-red-800">velge oss?</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Vi kombinerer erfaring, kvalitet og personlig service for å sikre de beste resultatene.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="w-8 h-8 text-red-800" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Erfaring</h3>
-              <p className="text-gray-600">
-                Over 20 års erfaring gir trygghet og kvalitet i alle prosjekter.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Hammer className="w-8 h-8 text-red-800" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Alt på ett sted</h3>
-              <p className="text-gray-600">
-                Vi håndterer alt fra snekring og maling til flislegging.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-red-800" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Fagfolk</h3>
-              <p className="text-gray-600">
-                Vårt team består av dyktige og erfarne håndverkere.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-8 h-8 text-red-800" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Trygghet</h3>
-              <p className="text-gray-600">
-                Vi leverer alltid kontrakter, forsikringer og garantier.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+                  </div>
                 </div>
               </div>
               <div className="p-8">
@@ -529,6 +474,50 @@ function TjenesterPage() {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hvorfor velge oss (NEW) */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+              Hvorfor <span className="text-red-800">velge oss?</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-4">
+              Vi kombinerer erfaring, kvalitet og trygghet – alt håndtert av ett team.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center justify-center mb-4">
+                <CheckCircle className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 text-center mb-2">Erfaring</h3>
+              <p className="text-gray-600 text-center">Over 20 års erfaring i bransjen.</p>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center justify-center mb-4">
+                <CheckCircle className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 text-center mb-2">Kvalitet</h3>
+              <p className="text-gray-600 text-center">Vi leverer solid håndverk som varer.</p>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center justify-center mb-4">
+                <CheckCircle className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 text-center mb-2">Trygghet</h3>
+              <p className="text-gray-600 text-center">Kontrakter, forsikringer og garantier.</p>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center justify-center mb-4">
+                <CheckCircle className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 text-center mb-2">Alt på ett sted</h3>
+              <p className="text-gray-600 text-center">Alle fag samlet under én paraply.</p>
             </div>
           </div>
         </div>
