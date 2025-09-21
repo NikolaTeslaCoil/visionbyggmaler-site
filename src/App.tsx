@@ -343,7 +343,7 @@ function GalleriPage({ openLightbox }: { openLightbox: (image: string) => void }
   );
 }
 
-function TjenesterPage() {
+function TjenesterPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
   return (
     <>
       {/* Header Section */}
@@ -479,50 +479,6 @@ function TjenesterPage() {
         </div>
       </section>
 
-      {/* Hvorfor velge oss (NEW) */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              Hvorfor <span className="text-red-800">velge oss?</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-4">
-              Vi kombinerer erfaring, kvalitet og trygghet – alt håndtert av ett team.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center justify-center mb-4">
-                <CheckCircle className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-2">Erfaring</h3>
-              <p className="text-gray-600 text-center">Over 20 års erfaring i bransjen.</p>
-            </div>
-            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center justify-center mb-4">
-                <CheckCircle className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-2">Kvalitet</h3>
-              <p className="text-gray-600 text-center">Vi leverer solid håndverk som varer.</p>
-            </div>
-            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center justify-center mb-4">
-                <CheckCircle className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-2">Trygghet</h3>
-              <p className="text-gray-600 text-center">Kontrakter, forsikringer og garantier.</p>
-            </div>
-            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center justify-center mb-4">
-                <CheckCircle className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-2">Alt på ett sted</h3>
-              <p className="text-gray-600 text-center">Alle fag samlet under én paraply.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -579,6 +535,39 @@ function TjenesterPage() {
         </div>
       </section>
 
+      {/* Hvorfor Velge Oss Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Hvorfor <span className="text-red-800">velge oss?</span>
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Erfaring</h3>
+              <p className="text-gray-600">Over 20 års erfaring i bransjen</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Kvalitet</h3>
+              <p className="text-gray-600">Vi leverer solid håndverk som varer</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Trygghet</h3>
+              <p className="text-gray-600">Kontrakter, forsikringer og garantier</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Alt på ett sted</h3>
+              <p className="text-gray-600">Alle fag samlet under én paraply</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call-to-Action Section */}
       <section className="py-20 bg-red-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -589,7 +578,7 @@ function TjenesterPage() {
             Kontakt oss i dag for en uforpliktende prat om ditt bygge- eller oppussingsprosjekt.
           </p>
           <button 
-            onClick={() => window.location.href = '#kontakt'}
+            onClick={() => setCurrentPage('kontakt')}
             className="bg-white hover:bg-gray-100 text-red-800 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Kontakt oss
@@ -640,57 +629,6 @@ function TjenesterPage() {
   );
 }
 
-function OmOssPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
-  return (
-    <>
-      {/* Header Section */}
-      <section className="bg-white pt-32 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Om oss
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Fra idé til suksess med Vision Bygg & Maler AS
-          </p>
-        </div>
-      </section>
-
-      {/* Main About Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Hos Vision Bygg & Maler AS gjør vi det meste innen innvendig oppussing – baderom, kjøkken, gulv, malerarbeid, snekkerarbeid, flislegging, elektro- og rørleggerarbeid. Vi setter sammen de beste håndverkerne til hvert prosjekt og sørger for et resultat du blir fornøyd med. Med over 20 års erfaring og etableringen i 2019, kombinerer vi fagkunnskap med god prosjektledelse og ett kontaktpunkt. Vi arbeider alltid med kontrakter i henhold til norsk lov, forsikringer, dokumentasjon og garantier utover lovens krav.
-              </p>
-            </div>
-            <div className="relative">
-              <img 
-                src="/assets/about-us-2.jpg" 
-                alt="Profesjonelle håndverkere i arbeid"
-                className="rounded-2xl shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Value Boxes */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="w-8 h-8 text-red-800" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Erfaring</h3>
-              <p className="text-gray-600">
-                Over 20 års erfaring i bransjen.
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Hammer className="w-8 h-8 text-red-800" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Alt på ett sted</h3>
