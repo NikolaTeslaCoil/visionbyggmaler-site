@@ -631,9 +631,12 @@ function TjenesterPage({ setCurrentPage }: { setCurrentPage: (page: string) => v
 
                 <Hammer className="w-8 h-8 text-red-800" />
               </div>
+              <div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Alt på ett sted</h3>
               <p className="text-gray-600">
                 Alle håndverk samlet under én paraply.
+              </p>
+              </div>
               </p>
             </div>
             
