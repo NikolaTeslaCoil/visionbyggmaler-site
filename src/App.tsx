@@ -66,7 +66,7 @@ function App() {
       case 'kontakt':
         return <KontaktOssPage />;
       case 'tjenester':
-        return <TjenesterPage setCurrentPage={setCurrentPage} />;
+        return <TjenesterPage />;
       case 'galleri':
         return <GalleriPage openLightbox={openLightbox} />;
       case 'om-oss':
@@ -343,7 +343,7 @@ function GalleriPage({ openLightbox }: { openLightbox: (image: string) => void }
   );
 }
 
-function TjenesterPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+function TjenesterPage() {
   return (
     <>
       {/* Header Section */}
@@ -535,39 +535,6 @@ function TjenesterPage({ setCurrentPage }: { setCurrentPage: (page: string) => v
         </div>
       </section>
 
-      {/* Hvorfor Velge Oss Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Hvorfor <span className="text-red-800">velge oss?</span>
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Erfaring</h3>
-              <p className="text-gray-600">Over 20 års erfaring i bransjen</p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Kvalitet</h3>
-              <p className="text-gray-600">Vi leverer solid håndverk som varer</p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Trygghet</h3>
-              <p className="text-gray-600">Kontrakter, forsikringer og garantier</p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Alt på ett sted</h3>
-              <p className="text-gray-600">Alle fag samlet under én paraply</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Call-to-Action Section */}
       <section className="py-20 bg-red-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -578,7 +545,7 @@ function TjenesterPage({ setCurrentPage }: { setCurrentPage: (page: string) => v
             Kontakt oss i dag for en uforpliktende prat om ditt bygge- eller oppussingsprosjekt.
           </p>
           <button 
-            onClick={() => setCurrentPage('kontakt')}
+            onClick={() => window.location.href = '#kontakt'}
             className="bg-white hover:bg-gray-100 text-red-800 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Kontakt oss
@@ -636,60 +603,45 @@ function OmOssPage({ setCurrentPage }: { setCurrentPage: (page: string) => void 
       <section className="bg-white pt-32 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Om Vision Bygg & Maler AS
+            Om oss
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
-            20 års erfaring med kvalitetshåndverk og kundetilfredshet
+            Fra idé til suksess med Vision Bygg & Maler AS
           </p>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Main About Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Vår historie og <span className="text-red-800">visjon</span>
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Vision Bygg & Maler AS ble etablert med en klar visjon: å levere håndverk av høyeste kvalitet 
-                med fokus på kundetilfredshet og langsiktige relasjoner. Med over 20 års erfaring i byggebransjen 
-                har vi bygget opp en solid reputasjon som en pålitelig partner for både private og bedrifter.
-              </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Vi tror på at kvalitet ikke er en tilfeldighet, men et resultat av grundig planlegging, 
-                riktig utførelse og kontinuerlig forbedring. Hver jobb vi påtar oss blir behandlet med 
-                samme omhu og profesjonalitet, uansett størrelse.
+                Hos Vision Bygg & Maler AS gjør vi det meste innen innvendig oppussing – baderom, kjøkken, gulv, malerarbeid, snekkerarbeid, flislegging, elektro- og rørleggerarbeid. Vi setter sammen de beste håndverkerne til hvert prosjekt og sørger for et resultat du blir fornøyd med. Med over 20 års erfaring og etableringen i 2019, kombinerer vi fagkunnskap med god prosjektledelse og ett kontaktpunkt. Vi arbeider alltid med kontrakter i henhold til norsk lov, forsikringer, dokumentasjon og garantier utover lovens krav.
               </p>
             </div>
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
-                alt="Håndverker i arbeid"
+                src="/assets/about-us-2.jpg" 
+                alt="Profesjonelle håndverkere i arbeid"
                 className="rounded-2xl shadow-2xl"
               />
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Values Section */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Våre <span className="text-red-800">verdier</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Disse verdiene styrer alt vi gjør og er grunnlaget for vårt arbeid
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+      {/* Value Boxes */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Award className="w-8 h-8 text-red-800" />
+                <Clock className="w-8 h-8 text-red-800" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Kvalitet</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Erfaring</h3>
               <p className="text-gray-600">
-                Vi leverer alltid håndverk av høyeste standard.
+                Over 20 års erfaring i bransjen.
               </p>
             </div>
             
@@ -697,12 +649,10 @@ function OmOssPage({ setCurrentPage }: { setCurrentPage: (page: string) => void 
               <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Hammer className="w-8 h-8 text-red-800" />
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Alt på ett sted</h3>
-                <p className="text-gray-600">
-                  Alle håndverk samlet under én paraply.
-                </p>
-              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Alt på ett sted</h3>
+              <p className="text-gray-600">
+                Alle håndverk samlet under én paraply.
+              </p>
             </div>
             
             <div className="bg-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
