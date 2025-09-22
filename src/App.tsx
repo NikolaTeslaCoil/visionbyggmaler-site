@@ -282,7 +282,7 @@ function GalleriPage({ openLightbox }: { openLightbox: (image: string) => void }
         </div>
       </section>
 
-    {/* Call-to-Action Section */}
+{/* Call-to-Action Section */}
 <section className="py-20 bg-red-800">
   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -291,14 +291,15 @@ function GalleriPage({ openLightbox }: { openLightbox: (image: string) => void }
     <p className="text-xl text-red-100 mb-8 leading-relaxed">
       Kontakt oss i dag for en uforpliktende samtale.
     </p>
-    <button 
-      onClick={() => setCurrentPage('kontakt')}
+    <button
+      onClick={() => (window.location.href = '/kontakt-oss')}
       className="bg-white hover:bg-gray-100 text-red-800 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
     >
       Kontakt oss
     </button>
   </div>
 </section>
+
 
       {/* Footer */}
       <footer className="bg-black text-white py-12">
