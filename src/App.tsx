@@ -292,13 +292,14 @@ function GalleriPage({ openLightbox }: { openLightbox: (image: string) => void }
       Kontakt oss i dag for en uforpliktende samtale.
     </p>
     <button
-      onClick={() => (window.location.href = '/kontakt-oss')}
+      onClick={() => setCurrentPage('kontakt')}
       className="bg-white hover:bg-gray-100 text-red-800 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
     >
       Kontakt oss
     </button>
   </div>
 </section>
+
 
 
       {/* Footer */}
