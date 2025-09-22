@@ -171,6 +171,17 @@ function App() {
           </div>
         </div>
       </nav>
+      {/* Mobile dropdown menu */}
+{mobileMenuOpen && (
+  <div className="md:hidden bg-white shadow-lg">
+    <button onClick={() => setCurrentPage('home')} className="block px-4 py-2 w-full text-left">Hjem</button>
+    <button onClick={() => setCurrentPage('tjenester')} className="block px-4 py-2 w-full text-left">Tjenester</button>
+    <button onClick={() => setCurrentPage('galleri')} className="block px-4 py-2 w-full text-left">Galleri</button>
+    <button onClick={() => setCurrentPage('om-oss')} className="block px-4 py-2 w-full text-left">Om Oss</button>
+    <button onClick={() => setCurrentPage('kontakt')} className="block px-4 py-2 w-full text-left">Kontakt oss</button>
+  </div>
+)}
+
 
       {renderPage()}
       
