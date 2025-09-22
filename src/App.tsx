@@ -173,14 +173,15 @@ function App() {
       </nav>
       {/* Mobile dropdown menu */}
 {mobileMenuOpen && (
-  <div className="md:hidden bg-white shadow-lg">
-    <button onClick={() => setCurrentPage('home')} className="block px-4 py-2 w-full text-left">Hjem</button>
-    <button onClick={() => setCurrentPage('tjenester')} className="block px-4 py-2 w-full text-left">Tjenester</button>
-    <button onClick={() => setCurrentPage('galleri')} className="block px-4 py-2 w-full text-left">Galleri</button>
-    <button onClick={() => setCurrentPage('om-oss')} className="block px-4 py-2 w-full text-left">Om Oss</button>
-    <button onClick={() => setCurrentPage('kontakt')} className="block px-4 py-2 w-full text-left">Kontakt oss</button>
+  <div className="md:hidden bg-white shadow-lg absolute top-24 left-0 w-full z-50">
+    <button onClick={() => { setCurrentPage('home'); setMobileMenuOpen(false); }} className="block px-4 py-3 w-full text-left hover:bg-gray-100">Hjem</button>
+    <button onClick={() => { setCurrentPage('tjenester'); setMobileMenuOpen(false); }} className="block px-4 py-3 w-full text-left hover:bg-gray-100">Tjenester</button>
+    <button onClick={() => { setCurrentPage('galleri'); setMobileMenuOpen(false); }} className="block px-4 py-3 w-full text-left hover:bg-gray-100">Galleri</button>
+    <button onClick={() => { setCurrentPage('om-oss'); setMobileMenuOpen(false); }} className="block px-4 py-3 w-full text-left hover:bg-gray-100">Om Oss</button>
+    <button onClick={() => { setCurrentPage('kontakt'); setMobileMenuOpen(false); }} className="block px-4 py-3 w-full text-left hover:bg-gray-100">Kontakt oss</button>
   </div>
 )}
+
 
 
       {renderPage()}
