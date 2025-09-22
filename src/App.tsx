@@ -5,6 +5,7 @@ function App() {
   const [currentPage, setCurrentPage] = React.useState('home');
   const [lightboxImage, setLightboxImage] = React.useState<string | null>(null);
   const [lightboxIndex, setLightboxIndex] = React.useState<number>(0);
+    const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   
   // Gallery images for lightbox navigation
   const galleryImages = [
