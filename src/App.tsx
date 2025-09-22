@@ -578,7 +578,7 @@ function TjenesterPage({ setCurrentPage }: { setCurrentPage: (page: string) => v
             Kontakt oss i dag for en uforpliktende prat om ditt bygge- eller oppussingsprosjekt.
           </p>
           <button 
-            onClick={() => window.location.href='/kontakt-oss'}
+            onClick={() => setCurrentPage('kontakt')}
             className="bg-white hover:bg-gray-100 text-red-800 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Kontakt oss
@@ -698,10 +698,10 @@ function OmOssPage({ setCurrentPage }: { setCurrentPage: (page: string) => void 
                 <Hammer className="w-8 h-8 text-red-800" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Alt på ett sted</h3>
-                <p className="text-gray-600">
-                  Alle håndverk samlet under én paraply.
-                </p>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Alt på ett sted</h3>
+              <p className="text-gray-600">
+                Alle håndverk samlet under én paraply.
+              </p>
               </div>
             </div>
             
