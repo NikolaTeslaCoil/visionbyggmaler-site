@@ -300,6 +300,11 @@ function GalleriPage({ openLightbox }: { openLightbox: (image: string) => void }
   </div>
 </section>
 
+      {/* Footer */}
+      <footer className="bg-black text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
               <h3 className="text-2xl font-bold mb-4">VISION BYGG & MALER AS</h3>
               <p className="text-gray-400 mb-4">
                 Profesjonelt håndverk med over 20 års erfaring innen snekring, maling og flislegging.
