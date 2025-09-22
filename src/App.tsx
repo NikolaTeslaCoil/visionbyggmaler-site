@@ -698,10 +698,10 @@ function OmOssPage({ setCurrentPage }: { setCurrentPage: (page: string) => void 
                 <Hammer className="w-8 h-8 text-red-800" />
               </div>
               <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Alt på ett sted</h3>
-              <p className="text-gray-600">
-                Alle håndverk samlet under én paraply.
-              </p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Alt på ett sted</h3>
+                <p className="text-gray-600">
+                  Alle håndverk samlet under én paraply.
+                </p>
               </div>
             </div>
             
@@ -1172,8 +1172,7 @@ function KontaktOssPage() {
                 <button
                   type="submit"
                   className="w-full bg-red-800 hover:bg-red-900 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center"
-                  className="bg-red-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-900 transition-colors"
-                  onClick={() => setCurrentPage('kontakt-oss')}
+                >
                   <Send className="w-5 h-5 mr-2" />
                   Send melding
                 </button>
